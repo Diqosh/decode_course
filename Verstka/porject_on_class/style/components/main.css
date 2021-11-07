@@ -1,0 +1,71 @@
+.ital{
+    font-family: 'Dancing Script', cursive;
+}
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+
+}
+
+.main-slider {
+    background-image: url("../../img/photo_2021-11-04_18-02-18.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    margin-right: 30px;
+
+    width: 66%;
+    height: 35vw;
+    min-height: 300px;
+
+    border-radius: 4px;
+    padding: 10% 10%;
+}
+
+.main-slider h1{
+    font-size: 40px;
+    color: #107819;
+    line-height: 1.2;
+}
+
+.shop-link {
+    display: flex;
+    align-items: center;
+
+}
+
+.shop-link img {
+    height: 10px;
+    width: 10px;
+}
+
+.main-info {
+    width: calc(34% - 30px);
+
+}
+
+.main-info--one {
+    background-image: url("../../img/photo_2021-11-04_18-02-21.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: calc(50% - 15px);
+
+    border-radius: 4px;
+}
+
+.main-info--two {
+    margin-top: 30px;
+    background-image: url("../../img/photo_2021-11-04_18-02-23.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: calc(50% - 15px);
+
+    border-radius: 4px;
+}
+.main-info--two img{
+    height: 12px;
+}

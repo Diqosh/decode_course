@@ -1,0 +1,139 @@
+.circle{
+    width: 10px;
+    height: 10px;
+    background-color: #97C3F9;
+    border: none;
+    border-radius: 50%;
+}
+.circle-row{
+    width: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.circle-wrap{
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    top: 160px;
+    left: 10px;
+}
+
+header {
+    width: calc(100% - 191px);
+    padding-left: 191px;
+    padding-top: 56px;;
+    height: 730px;
+}
+
+.header-menu {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.header-menu > .logo {
+    display: flex;
+    align-items: center;
+    width: 170px;
+    justify-content: space-around;
+
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.header-menu > .logo > .circle {
+    height: 41px;
+    width: 41px;
+    border-radius: 50%;
+    background-color: #458FF6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+}
+
+.header-menu .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 550px;
+    padding-right: 192px;
+
+    font-size: 18px;
+    color: #7D7987;
+}
+
+.header-menu .menu .menu-elem{
+
+    padding-right: 40px;
+    transition: 0.3s;
+
+}
+
+.header-menu .menu .menu-elem:hover{
+    transition: 0.5s;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.header-text-wrapper {
+    padding-right: 190px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-text-wrapper .header-text-img {
+    width: 693px;
+    height: 598px;
+    background-image: url("../../img/trafalgar-header illustration 1.png");
+}
+
+.header-only-text-wrapper {
+    padding-top: 191px;
+    height: 350px;
+
+
+
+}
+
+.header-header {
+
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 56px;
+}
+
+.header-text {
+    padding-top: 25px;
+    color: #7D7987;
+    font-size: 21px;
+    line-height: 32px;
+}
+.header-button{
+    width: 200px;
+    height: 56px;
+    background-color: #458FF6;
+    color: white;
+
+    border-radius: 56px;
+    border: none;
+
+    font-size: 18px;
+    font-weight: bold;
+
+
+    margin-top: 45px;
+    transition: 0.4s;
+}
+.header-button:hover{
+    background-color: #220959;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
