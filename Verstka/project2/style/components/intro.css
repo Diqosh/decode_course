@@ -1,0 +1,55 @@
+.intro {
+    margin: 220px auto 0;
+    width: calc(100% * 0.7);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.intro > .intro-image img {
+    height: 477px;
+    width: 600px;
+}
+
+.intro .intro-text-header{
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+.intro .intro-text-hr{
+    width: 56px;
+    height: 2px;
+    background-color: black;
+    margin-top: 25px;
+}
+
+.intro .intro-text-text{
+    margin-top: 31px;
+    font-size: 18px;
+    color: #7D7987;
+    line-height: 30px;
+}
+
+.intro-button{
+    margin-top: 40px;
+    width: 200px;
+    height: 60px;
+    background-color: transparent;
+    border: 1px solid #458FF6;
+    border-radius: 60px;
+
+    font-size: 18px;
+    font-weight: bold;
+    color: #458FF6;
+
+    transition: .4s;
+}
+
+.intro-button:hover{
+    background-color: #458FF6;
+    color: white;
+    cursor: pointer;
+
+    transition: .4s;
+}

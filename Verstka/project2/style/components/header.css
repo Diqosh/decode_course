@@ -26,7 +26,6 @@ header {
     width: calc(100% - 191px);
     padding-left: 191px;
     padding-top: 56px;;
-    height: 730px;
 }
 
 .header-menu {
@@ -91,7 +90,11 @@ header {
 .header-text-wrapper .header-text-img {
     width: 693px;
     height: 598px;
-    background-image: url("../../img/trafalgar-header illustration 1.png");
+    background-image: url("../../img/trafalgar-header illustration.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    margin-top: 81px;
 }
 
 .header-only-text-wrapper {
