@@ -1,7 +1,8 @@
-.ital{
+.ital {
     font-family: 'Dancing Script', cursive;
     font-size: 24px;
 }
+
 .main {
     display: flex;
     flex-wrap: wrap;
@@ -28,7 +29,7 @@
     position: relative;
 }
 
-.main-slider h1{
+.main-slider h1 {
     margin-top: 30px;
 
     font-size: 40px;
@@ -53,11 +54,15 @@
     transition: .4s;
 }
 
-.shop-link:hover{
+.shop-link:hover {
     color: #bac34e;
     border-bottom: 1px solid #bac34e;
 
     transition: .4s;
+}
+
+.shop-link:hover img {
+    filter: invert(68%) sepia(74%) saturate(350%) hue-rotate(23deg) brightness(100%) contrast(78%);
 }
 
 .shop-link img {
@@ -66,18 +71,19 @@
     width: 10px;
 }
 
-.slider-arrows{
+.slider-arrows {
     display: flex;
     flex-direction: row;
     width: 120px;
     justify-content: space-between;
     position: absolute;
     bottom: 30px;
-    right:  50px;
+    right: 50px;
 
 
 }
-.slider-arrows > *{
+
+.slider-arrows > * {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -90,21 +96,23 @@
     transition: .4s;
 }
 
-.slider-arrows > *:hover{
+.slider-arrows > *:hover {
     background-color: #bac34e;
     transition: 0.4s;
     cursor: pointer;
 }
-.slider-arrows > *:hover img{
+
+.slider-arrows > *:hover img {
     filter: invert(0.9);
     transition: 0.4s;
 }
+
 .slider-arrows img {
-     height: 23px;
+    height: 23px;
     width: 23px;
 }
 
-.slider-arrows span:first-child  img[src='img/2561331_right_arrow_icon.svg']{
+.slider-arrows span:first-child img[src='img/2561331_right_arrow_icon.svg'] {
     transform: rotate(180deg);
 }
 
@@ -153,16 +161,18 @@
 
 }
 
-.main-info--two > h3{
+.main-info--two > h3 {
     font-size: 43px;
     font-weight: bold;
     color: #bac34e;
 }
-.main-info--two img{
+
+.main-info--two img {
     height: 12px;
     filter: invert(1);
 }
-.main-info--two > button{
+
+.main-info--two > button {
     width: 150px;
     height: 45px;
     border: none;
@@ -175,12 +185,11 @@
 
 }
 
-.main-info--two > button:hover{
+.main-info--two > button:hover {
     background-color: white;
 
     cursor: pointer;
     color: #bac34e;
-
 
 
     transition: .4s;
