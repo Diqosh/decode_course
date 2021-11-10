@@ -12,7 +12,7 @@
     align-items: center;
 }
 
-.circle-wrap{
+header .circle-wrap{
     height: 110px;
     display: flex;
     flex-direction: column;

@@ -23,6 +23,7 @@
 }
 
 .nav-right {
+    position: relative;
     display: flex;
     align-items: center;
     border-left: 1px solid white;

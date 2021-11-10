@@ -1,0 +1,84 @@
+.app{
+    position: relative;
+
+    margin: 0 auto;
+    padding-top: 229px ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100% * 0.75);
+}
+
+
+.app .app-text-header{
+    font-size: 36px;
+    line-height: 48px;
+    font-weight: bold;
+}
+
+.app .app-text-hr{
+    width: 56px;
+    height: 2px;
+    background-color: black;
+    margin-top: 25px;
+}
+.app .app-text-text{
+    margin-top: 31px;
+    font-size: 18px;
+    line-height: 30px;
+    color: #7D7987;
+}
+
+
+.app .app-image img {
+    width: 665px;
+    height: 434px;
+}
+.app .app-button{
+    margin-top: 40px;
+    width: 200px;
+    height: 60px;
+    background-color: transparent;
+    border: 1px solid #458FF6;
+    border-radius: 60px;
+
+    font-size: 18px;
+    font-weight: bold;
+    color: #458FF6;
+
+    transition: .4s;
+}
+
+.app-button:hover{
+    background-color: #458FF6;
+    color: white;
+    cursor: pointer;
+
+    transition: .4s;
+}
+
+
+.circle{
+    width: 10px;
+    height: 10px;
+    background-color: #97C3F9;
+    border: none;
+    border-radius: 50%;
+}
+.circle-row{
+    width: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.circle-wrap{
+    height: 110px;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    right: -200px;
+}

@@ -38,7 +38,7 @@
     display: flex;
     flex-direction: column;
     background-image: url("../../img/element.png");
-    background-color: #fbfffd;
+
     background-repeat: no-repeat;
     background-position: right center;
 }
@@ -91,11 +91,12 @@ img[src='img/Track.png']{
 
     background-color: white;
     border-radius: 20px;
+    box-shadow: 0 0 100px #c4dcf6;
 
     transition: 0.4s;
 }
 .service-elem:hover{
-
+    cursor: pointer;
     box-shadow: 5px 10px 8px #97C3F9;
     transition: 0.4s;
 }
@@ -136,3 +137,4 @@ img[src='img/Track.png']{
 
     transition: .4s;
 }
+
