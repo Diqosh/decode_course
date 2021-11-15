@@ -1,0 +1,100 @@
+@charset "UTF-8";
+img[src="image/service/arrow.svg"] {
+  transition: 0.4s;
+}
+
+.services {
+  padding: 0 75px;
+}
+.services .services-header {
+  font-size: 42px;
+  line-height: 64px;
+}
+.services .services-header:after {
+  content: " ";
+  display: block;
+  width: 68px;
+  height: 2px;
+  background-color: #220959;
+}
+.services .services-wrapper {
+  height: 650px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.services .services-wrapper .services-column-wrapper {
+  width: calc(33% - 20px);
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  height: 500px;
+}
+.services .services-wrapper .services-column-wrapper .service {
+  border: 1px solid #220959;
+  min-height: fit-content;
+}
+.services .services-wrapper .services-column-wrapper .service:hover {
+  background-color: #220959;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.services .services-wrapper .services-column-wrapper .service:hover .service-desc-wrap {
+  background-color: white;
+  transition: 0.5s;
+}
+.services .services-wrapper .services-column-wrapper .service:hover .service-name {
+  filter: invert(100%);
+  color: black;
+  transition: 0.5s;
+}
+.services .services-wrapper .services-column-wrapper .service:hover img[src="image/service/arrow.svg"] {
+  transform: rotate(90deg);
+  transition: 0.4s;
+}
+.services .services-wrapper .services-column-wrapper .service:hover .service-desc-wrap {
+  height: fit-content;
+  display: block;
+  opacity: 1;
+  transition: 0.3s;
+  position: static;
+}
+.services .services-wrapper .services-column-wrapper .service .service-name {
+  padding: 15px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  position: relative;
+}
+.services .services-wrapper .services-column-wrapper .service .service-name img {
+  height: 30px;
+  width: 30px;
+}
+.services .services-wrapper .services-column-wrapper .service .service-name img[src="image/service/arrow.svg"] {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  right: 5px;
+}
+.services .services-wrapper .services-column-wrapper .service-desc-wrap {
+  padding: 10px;
+  height: 0;
+  opacity: 0;
+  transition: 0.5s;
+  position: absolute;
+  top: -100px;
+}
+.services .services-wrapper .services-column-wrapper .service-desc-wrap .service-desc {
+  margin-top: 5px;
+  margin-left: 20px;
+}
+.services .services-wrapper .services-column-wrapper .service-desc-wrap .service-desc:before {
+  content: url("../image/service/черты.svg");
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+}
+
+/*# sourceMappingURL=services.css.map */

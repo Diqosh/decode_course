@@ -1,0 +1,82 @@
+.consult-data-wrap {
+  padding-right: 70px;
+}
+
+.consult {
+  display: flex;
+  padding-left: 75px;
+}
+.consult > * {
+  width: 50%;
+}
+.consult .consult-text-header {
+  font-size: 34px;
+  font-weight: bold;
+}
+.consult .consult-text-header:after {
+  content: " ";
+  display: block;
+  height: 2px;
+  width: 68px;
+  background-color: #220959;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.consult .consult-text-text {
+  font-size: 14px;
+  color: #7D7987;
+  line-height: 1.5;
+}
+.consult .data-wrap {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.consult .data-wrap > .data--one, .consult .data-wrap .data--two {
+  display: flex;
+  gap: 50px;
+  margin-bottom: 50px;
+}
+.consult .data-wrap > .data--one > *, .consult .data-wrap .data--two > * {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.consult .data-wrap > .data--one div, .consult .data-wrap .data--two div {
+  font-weight: bold;
+}
+.consult .data-wrap > .data--one input, .consult .data-wrap .data--two input {
+  border: none;
+  outline: none;
+  height: 50px;
+  border-bottom: 1px solid #7D7987;
+}
+.consult .submit-wrap {
+  display: flex;
+  gap: 50px;
+}
+.consult .submit-wrap button {
+  border: none;
+  width: 200px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: #220959;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.consult .submit-wrap div {
+  font-size: 14px;
+  color: #7D7987;
+  width: calc(100% - 200px);
+}
+.consult img {
+  height: 500px;
+  object-fit: cover;
+}
+
+/*# sourceMappingURL=consult.css.map */

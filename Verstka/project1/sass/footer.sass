@@ -1,0 +1,40 @@
+img
+   height: 20px
+   //&:hover
+   //   transform: scale(1.5)
+
+footer
+   position: relative
+   z-index: 10000000000
+
+
+.contact
+   position: absolute
+   background-color: white
+   padding: 50px
+   display: flex
+   flex-direction: column
+   > div
+      overflow: hidden
+
+   & p:first-child
+      font-weight: bold
+      font-size: 34px
+
+      &:after
+         content: ' '
+         display: block
+         width: 68px
+         height: 2px
+         background-color: #220959
+         margin: 10px 0 20px
+   & p:nth-child(2)
+      font-weight: bold
+      font-size: 16px
+      margin-bottom: 10px
+   & p:nth-child(3)
+      margin-bottom: 10px
+   & p:nth-child(4), & p:nth-child(5), & p:last-child
+      display: flex
+      align-items: center
+      gap: 10px

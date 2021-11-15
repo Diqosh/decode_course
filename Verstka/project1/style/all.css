@@ -1,6 +1,11 @@
 @import url('vendor/reset.css');
 @import url('components/base.css');
 @import url('components/header.css');
+@import url("../sass/services.css");
+@import url("../sass/adv.css");
+@import url("../sass/partner.css");
+@import url("../sass/consult.css");
+@import url("../sass/footer.css");
 
 
 .welcome{

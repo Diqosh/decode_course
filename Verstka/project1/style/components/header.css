@@ -158,7 +158,7 @@ header{
 .welcome-icons {
 
     display: flex;
-    width: 150px;
+    gap: 5px;
     justify-content: space-between;
 
     position: absolute;
@@ -192,7 +192,7 @@ header{
 
 .intro{
     display: flex;
-    justify-content: space-around;
+
     align-items: center;
     height: 442px;
     width: 100%;
