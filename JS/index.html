@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="sort">
+        sort by:
+        <button onclick="sort('name')">name</button>
+        <button onclick="sort('age')">age</button>
+        <button onclick="sort('gpa')">gpa</button>
+    </div>
+    <input type="text" placeholder="Name">
+    <input type="number" placeholder="Age">
+    <input type="number" placeholder="Gpa">
+        <button onclick="addStudent()">add</button>
+    <div class="students-header">
+
+        <div class="students-item">
+            <div>№</div>
+            <div>Name</div>
+            <div>Age</div>
+            <div>Gpa</div>
+            <div>Actions</div>
+        </div>
+
+    </div>
+    <div id="students">
+
+    </div>
+
+    <script src="js/index.js"></script>
+</body>
+</html>

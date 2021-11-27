@@ -22,15 +22,18 @@
    .adv
       background: url("../image/adv/bg.jpg")
       background-repeat:  no-repeat
+      min-width: 300px
 
 
-   > *
+   > .advantages--one
       display: flex
       justify-content: space-between
+      flex-wrap: wrap
 
 
       > *
          width: 30%
+
          min-height: 148px
          display: flex
          align-items: center
@@ -51,3 +54,10 @@
             display: flex
             flex-direction: column
             gap: 10px
+
+@media (max-width: 1100px)
+   .advantages--one, .advantages--two
+      justify-content: center!important
+      align-items: center
+      gap: 40px
+      flex-wrap: wrap

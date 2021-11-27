@@ -1,13 +1,13 @@
-header{
+header {
     height: 130px;
 }
 
-.wrap-element-abs{
+.wrap-element-abs {
     position: absolute;
     left: 0;
 }
 
-.wrapper{
+.wrapper {
     /*width: 1700px;*/
     display: flex;
     justify-content: space-between;
@@ -15,12 +15,12 @@ header{
 
 }
 
-.wrapper .logo{
+.wrapper .logo {
     width: 138px;
     height: 126px;
 }
 
-.wrapper .menu{
+.wrapper .menu {
     height: 80px;
     width: 90%;
     display: flex;
@@ -28,18 +28,19 @@ header{
     justify-content: space-around;
 
 }
-.wrapper .hr{
+
+.wrapper .hr {
     width: 100%;
     border-top: 1px solid black;
 }
 
-.wrap-element-abs .hr{
+.wrap-element-abs .hr {
     width: 76px;
     border-top: 1px solid black;
 
 }
 
-.wrapper .top-menu{
+.wrapper .top-menu {
     width: 1100px;
     display: flex;
     flex-direction: row;
@@ -47,19 +48,19 @@ header{
     align-items: center;
 }
 
-.wrapper .top-menu-elements{
+.wrapper .top-menu-elements {
     display: flex;
     align-items: center;
 
 }
 
-.wrapper .top-menu-elements img{
+.wrapper .top-menu-elements img {
     height: 21px;
     width: 21px;
     margin-right: 10px;
 }
 
-.wrapper .bottom-menu{
+.wrapper .bottom-menu {
     width: 600px;
     display: flex;
     flex-direction: row;
@@ -69,7 +70,7 @@ header{
     text-transform: capitalize;
 }
 
-.bottom-menu-elements{
+.bottom-menu-elements {
     min-width: 120px;
     height: 20px;
     display: flex;
@@ -78,7 +79,7 @@ header{
     transition: 0.4s;
 }
 
-.bottom-menu .bottom-menu-elements:hover{
+.bottom-menu .bottom-menu-elements:hover {
     min-width: 120px;
     height: 20px;
     background-color: #220959;
@@ -92,7 +93,7 @@ header{
 }
 
 
-.search{
+.search {
     display: flex;
     align-items: center;
     background-color: #C4C4C4;
@@ -101,39 +102,39 @@ header{
     width: 20px;
 }
 
-.search > img{
+.search > img {
     height: 20px;
 }
 
-.search > input{
+.search > input {
     border: none;
     background-color: transparent;
     outline: none;
 }
 
-.search > button{
+.search > button {
     border: none;
     background-color: transparent;
 
 }
 
-.welcome-section{
+.welcome-section {
     padding-top: 150px;
 }
 
-.welcome-section .header-welcome{
+.welcome-section .header-welcome {
     color: #220959;
     font-size: 60px;
     font-weight: bold;
 }
 
-.welcome-section .welcome-text{
+.welcome-section .welcome-text {
     color: #202020;
     padding-top: 17px;
     font-size: 19px;
 }
 
-.welcome-section .welcome-button{
+.welcome-section .welcome-button {
     width: 342px;
     height: 63px;
     border: 3px solid #220959;
@@ -145,7 +146,7 @@ header{
     transition: 0.4s;
 }
 
-.welcome-section .welcome-button:hover{
+.welcome-section .welcome-button:hover {
     background-color: #220959;
     color: #e8f8f7;
     border: 3px solid #e8f8f7;
@@ -164,10 +165,11 @@ header{
     position: absolute;
     bottom: 20px;
 }
-.welcome-icons .icons{
+
+.welcome-icons .icons {
     width: 32px;
     height: 32px;
-    border:2px solid #220959;
+    border: 2px solid #220959;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -175,7 +177,8 @@ header{
 
     transition: 0.4s;
 }
-.welcome-icons .icons:hover{
+
+.welcome-icons .icons:hover {
     background-color: #bac34e;
     transition: 0.4s;
     filter: invert(1);
@@ -183,66 +186,66 @@ header{
 }
 
 
-
-
-.welcome-icons .icons img{
+.welcome-icons .icons img {
     height: 15px;
 
 }
 
-.intro{
+.intro {
     display: flex;
-
+    margin: 40px 0;
     align-items: center;
-    height: 442px;
+    height: fit-content;
     width: 100%;
 }
 
-.intro-text-wrap{
+.intro-text-wrap {
     width: 50%;
-    height: 372px;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     margin-right: 86px;
 }
 
-.intro-text-wrap .intro-header{
+.intro-text-wrap .intro-header {
     font-weight: bold;
     font-size: 42px;
 }
 
-.intro-header .hr{
+.intro-header .hr {
     margin-top: 15px;
     height: 2px;
     width: 68px;
     background-color: #220959;
 }
 
-.intro-text-wrap .intro-text{
+.intro-text-wrap .intro-text {
     line-height: 27px;
+    min-width: 400px;
 }
 
-.intro-fact-wrapper{
+.intro-fact-wrapper {
     display: flex;
+    gap: 15px;
     align-items: center;
     justify-content: space-between;
 }
 
-.intro-fact-wrapper .facts{
+.intro-fact-wrapper .facts {
     height: 77px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
 
-.intro-fact-wrapper .fact-num{
+.intro-fact-wrapper .fact-num {
     font-size: 24px;
     font-weight: bold;
     color: #220959;
 }
 
-.intro-fact-wrapper .fact-text{
+.intro-fact-wrapper .fact-text {
     line-height: 20px;
 }
 
@@ -253,4 +256,20 @@ header{
     background-position: center center;
     background-size: cover;
 }
+
+
+
+@media (max-width: 1366px) {
+    .wrapper .menu {
+        display: none;
+    }
+
+
+    .intro-fact-wrapper{
+        flex-wrap: wrap;
+        justify-content: start;
+        align-items: center;
+    }
+}
+
 

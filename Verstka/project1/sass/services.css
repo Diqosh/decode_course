@@ -18,7 +18,7 @@ img[src="image/service/arrow.svg"] {
   background-color: #220959;
 }
 .services .services-wrapper {
-  height: 650px;
+  height: fit-content;
   margin-top: 50px;
   display: flex;
   flex-direction: row;
@@ -26,11 +26,12 @@ img[src="image/service/arrow.svg"] {
 }
 .services .services-wrapper .services-column-wrapper {
   width: calc(33% - 20px);
-  min-width: 250px;
+  min-width: 350px;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   gap: 15px;
-  height: 500px;
+  height: fit-content;
 }
 .services .services-wrapper .services-column-wrapper .service {
   border: 1px solid #220959;
@@ -83,8 +84,7 @@ img[src="image/service/arrow.svg"] {
   height: 0;
   opacity: 0;
   transition: 0.5s;
-  position: absolute;
-  top: -100px;
+  overflow: hidden;
 }
 .services .services-wrapper .services-column-wrapper .service-desc-wrap .service-desc {
   margin-top: 5px;
@@ -95,6 +95,18 @@ img[src="image/service/arrow.svg"] {
   width: 10px;
   height: 10px;
   margin-right: 5px;
+}
+
+@media (max-width: 1300px) {
+  .services .services-wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+  }
+  .services .services-wrapper .services-column-wrapper {
+    margin: 15px;
+  }
 }
 
 /*# sourceMappingURL=services.css.map */

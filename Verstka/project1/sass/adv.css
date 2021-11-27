@@ -23,33 +23,44 @@
 .advantages-wrapper .adv {
   background: url("../image/adv/bg.jpg");
   background-repeat: no-repeat;
+  min-width: 300px;
 }
-.advantages-wrapper > * {
+.advantages-wrapper > .advantages--one {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
-.advantages-wrapper > * > * {
+.advantages-wrapper > .advantages--one > * {
   width: 30%;
   min-height: 148px;
   display: flex;
   align-items: center;
   gap: 20px;
 }
-.advantages-wrapper > * > * .adv-header {
+.advantages-wrapper > .advantages--one > * .adv-header {
   font-size: 24px;
   line-height: 24px;
   color: #202020;
   text-transform: uppercase;
 }
-.advantages-wrapper > * > * .adv-text {
+.advantages-wrapper > .advantages--one > * .adv-text {
   font-size: 18px;
   line-height: 22px;
   color: #202020;
 }
-.advantages-wrapper > * > * > * {
+.advantages-wrapper > .advantages--one > * > * {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+@media (max-width: 1100px) {
+  .advantages--one, .advantages--two {
+    justify-content: center !important;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
 }
 
 /*# sourceMappingURL=adv.css.map */

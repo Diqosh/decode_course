@@ -6,6 +6,9 @@
   display: flex;
   padding-left: 75px;
 }
+.consult > .se {
+  overflow: hidden;
+}
 .consult > * {
   width: 50%;
 }
@@ -77,6 +80,17 @@
 .consult img {
   height: 500px;
   object-fit: cover;
+}
+
+@media (max-width: 1100px) {
+  .consult .se {
+    display: none;
+  }
+
+  .consult-data-wrap {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 }
 
 /*# sourceMappingURL=consult.css.map */

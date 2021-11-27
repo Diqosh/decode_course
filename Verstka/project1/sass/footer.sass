@@ -1,11 +1,13 @@
 img
    height: 20px
-   //&:hover
-   //   transform: scale(1.5)
+   transition: .4s
+   &:hover
+      transform: scale(1.5)
+      transition: .4s
 
 footer
    position: relative
-   z-index: 10000000000
+
 
 
 .contact
@@ -14,6 +16,9 @@ footer
    padding: 50px
    display: flex
    flex-direction: column
+   z-index: 1
+   bottom: 50px
+   right: 50px
    > div
       overflow: hidden
 

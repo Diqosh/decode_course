@@ -27,6 +27,7 @@
 }
 .partner-wrapper > * {
   width: 30%;
+  min-width: 300px;
   height: 30%;
   overflow: hidden;
   display: flex;
@@ -59,6 +60,15 @@
 }
 .partner-wrapper > * > .partner-desc .partner-job {
   font-size: 16px;
+}
+
+@media (max-width: 1200px) {
+  .partner-wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    align-items: center;
+  }
 }
 
 /*# sourceMappingURL=partner.css.map */
