@@ -1,0 +1,17 @@
+body{
+    display: flex;
+    align-items: center;
+}
+.wrapper{
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.box{
+    width: calc(33.3% - 9px);
+    height: 33.3%;
+    border: 1px solid #220959;
+}

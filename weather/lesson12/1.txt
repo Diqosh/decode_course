@@ -1,0 +1,6 @@
+get -get
+post - save
+out - edit
+delete - delete
+
+uri

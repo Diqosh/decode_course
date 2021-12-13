@@ -1,2 +1,37 @@
-sorting optimize
-scrollheight input
+
+a.dataset.index = 1 // data-index = 1
+a.setAttribute("data-set-name", 'asd') // data-set-name = "asd"
+
+contentEditable
+
+
+
+// simple event listener overrides
+//add event listener push event
+f.addEventListener('click' ,(e)=>{
+    console.log(e)
+})
+
+()=> differents other function
+
+arr[1, 2, 3]
+brr = [...arr]
+const user = {
+    id: 1,
+    name: "almas",
+    age: 25
+}
+
+const {name, age} = user;
+console.log(name, age)
+
+
+let cloned = JSON.parse(JSON.stringify(obj));
+
+for (const [key, value] of Object.entries(object1)) {
+  console.log(`${key}: ${value}`);
+}
+
+for (const property in object) {
+  console.log(`${property}: ${object[property]}`);
+}

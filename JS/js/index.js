@@ -74,7 +74,7 @@ let studentsHTMl = ""
 // students.forEach((item, i) => {
 //     studentsHTMl += `
 //         <div class="students-item">
-//             <div>${i + 1}</div>
+//             <div>${i + xo}</div>
 //             <div>${item.name}</div>
 //             <div>${item.age}</div>
 //             <div>${item.gpa}</div>
@@ -82,8 +82,8 @@ let studentsHTMl = ""
 //     `
 // })
 
-function showStudents() {
-    studentsDIV.innerHTML = students.map((item, i) =>
+function showStudents(cur) {
+    studentsDIV.innerHTML = cur.map((item, i) =>
         `
         <div class="students-item">
             <div>${i + 1}</div>
@@ -93,7 +93,7 @@ function showStudents() {
             <div><button onclick=del(${i})>Detete</button><button onclick=edit(${i})>Edit</button></div>
         </div>
         <div class="students-item form">
-            <div>1</div>
+            <div></div>
             <input type="text" value="${item.name}">
             <input type="text" value="${item.age}">
             <input type="text" value="${item.gpa}">
@@ -103,50 +103,74 @@ function showStudents() {
     ).join(' ')
 }
 
-function compareAge(a , b){
-    if(a.age < b.age){
-        return -1
-    }
-    else if (a.age > b.age){
-        return 1
-    }
-    return 0
+let f = document.getElementById("search")
+
+f.addEventListener('click' ,(e)=>{
+    console.log(e.target)
+})
+
+
+
+function setStorage() {
+    localStorage.setItem("students", JSON.stringify(students))
 }
-function compareName(a , b){
-    if(a.name < b.name){
-        return -1
-    }
-    else if (a.name > b.name){
-        return 1
-    }
-    return 0
+
+if (localStorage.getItem("students")) {
+    students = JSON.parse(localStorage.getItem("students"))
+} else {
+    setStorage()
 }
-function compareGPA(a , b){
-    if(a.gpa < b.gpa){
+
+function compareAge(a, b) {
+    if (a.age < b.age) {
         return -1
-    }
-    else if (a.gpa > b.gpa){
+    } else if (a.age > b.age) {
         return 1
     }
     return 0
 }
 
-function sort(str){
-    if(str === "name"){
+const a = document.querySelector('.students-header')
+a.setAttribute("data-set-name", 'asd')
+
+let i = 1
+
+function compareName( a, b) {
+
+        if (a.name > b.name) {
+            return -1
+        } else if (a.name < b.name) {
+            return 1
+        }
+
+
+}
+
+function compareGPA(a, b) {
+    if (a.gpa < b.gpa) {
+        return -1
+    } else if (a.gpa > b.gpa) {
+        return 1
+    }
+    return 0
+}
+
+function sort(str) {
+    if (str === "name") {
         students.sort(compareName)
     }
-    if(str === "age"){
+    if (str === "age") {
         students.sort(compareAge)
     }
-    if(str === "gpa"){
+    if (str === "gpa") {
         students.sort(compareGPA)
     }
 
     console.log(students)
-    showStudents()
+    showStudents(students)
 }
 
-function save(i){
+function save(i) {
     let current_btn_edit = document.querySelector(`button[onclick="save(${i})"]`)
     let form = current_btn_edit.parentElement.parentElement;
     let cur_name = form.querySelector("input:nth-child(2)").value
@@ -155,38 +179,68 @@ function save(i){
     students[i].name = cur_name
     students[i].age = cur_age
     students[i].gpa = cur_gpa
-    showStudents()
+    showStudents(students)
+    setStorage()
 }
 
-function edit(i){
+function edit(i) {
     let current_btn_edit = document.querySelector(`button[onclick="edit(${i})"]`)
     let form = current_btn_edit.parentElement.parentElement.nextElementSibling;
-    // form.style.height = form.scrollHeight + "px"
-    form.style.height = "20px"
+    form.style.height = form.scrollHeight + "px"
+
+
 }
 
 
 function del(i) {
     students.splice(i, 1);
-    showStudents()
+    showStudents(students)
 }
 
-showStudents()
+showStudents(students)
 
 let name = document.querySelector('input[placeholder="Name"]')
 let age = document.querySelector('input[placeholder="Age"]')
-let Gpa = document.querySelector('input[placeholder="Gpa"]')
+let gpa = document.querySelector('input[placeholder="Gpa"]')
 
 function addStudent() {
     students.push({
         name: name.value,
         age: age.value,
-        gpa: Gpa.value
+        gpa: gpa.value
     })
-    showStudents()
+    showStudents(students)
     name.value = ''
     age.value = ''
-    Gpa.value = ''
+    gpa.value = ''
+    setStorage()
+}
+
+function search() {
+    let a = document.getElementById("search").value
+    let searched_students = []
+    students.forEach(item => {
+
+        if (a === '') {
+            showStudents(students)
+        }
+        if (typeof (a) === "string") {
+            if (item.name.includes(a)) {
+                searched_students.push(item)
+            }
+        } else if (typeof (a) === "number") {
+            if (0 < parseInt(a) <= 4) {
+                if (item.gpa.toString().includes(a)) {
+                    searched_students.push(item)
+                }
+            } else {
+                if (item.age === parseInt(a)) {
+                    searched_students.push(item)
+                }
+            }
+        }
+    })
+    showStudents(searched_students)
 }
 
 
