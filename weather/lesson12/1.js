@@ -21,7 +21,7 @@ let draw = function (day) {
         .then((res) => {
             dataApi = res
             let myCurData = res.data.forecast.forecastday
-            console.log(myCurData)
+
 
 
             for (let i = 0; i < myCurData[day].hour.length; i += 3) {
@@ -60,10 +60,7 @@ let draw = function (day) {
 
 
 }
-setTimeout(()=>{
-    console.log(dataApi)
-}, 3000)
-console.log(dataApi)
+
 draw(0)
 
 let redraw = function (day) {

@@ -1,0 +1,14 @@
+#city{
+    background-color: lightblue;
+    width: 410px;
+    max-height: 200px;
+    overflow: auto;
+}
+#city > div:hover{
+    background-color: #97C3F9;
+    cursor: pointer;
+}
+.wrapper{
+    display: flex;
+
+}

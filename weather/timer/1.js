@@ -6,8 +6,9 @@ let startBtn = document.getElementById('start'),
     inter,
     time = document.querySelector('.time'),
     degree = 0,
-    second
-
+    millisecond = 0
+    time.innerHTML = "0: 0: 0"
+    
 function createBtn(text) {
     if (text === 'stop') {
         stopBtn = document.createElement('button')
@@ -20,8 +21,6 @@ function createBtn(text) {
         startBtn.innerText = text
         startBtn.addEventListener('click', start)
     }
-
-
 }
 
 
@@ -29,19 +28,20 @@ function createBtn(text) {
 let start = function () {
     let start = Date.now()
     inter = setInterval(() => {
-        second = Math.floor((Date.now() - start)/1000)
+        millisecond = (Date.now() - start)
 
+        let second = Math.floor(millisecond / 1000)
+        let minute = Math.floor(second/ 60)
+        time.innerHTML = `${minute}: ${second%60}: ${Math.floor((Math.floor(millisecond) % 1000)/10)}`
 
-        time.innerHTML = `${Math.floor(second/60)}: ${second % 60}`
-
-        degree += 6;
+        degree += 0.06;
         rotate.style.transform = `rotate(${degree}deg)`
-    }, 1000)
+    }, 10)
 
     createBtn('stop')
     startBtn.replaceWith(stopBtn)
 
-    startBtn.removeEventListener("click", start)
+
 }
 
 let reset = function () {
@@ -51,11 +51,15 @@ let reset = function () {
 
     rotate.style.transform = `rotate(0deg)`
     degree = 0
-    setTimeout(() => {
-        clearInterval(inter)
-    }, 0)
     createBtn('start')
-    stopBtn.replaceWith(startBtn)
+
+    if (stopBtn !== null){
+        stopBtn.replaceWith(startBtn)
+    }
+
+    clearInterval(inter)
+
+
 
 }
 
@@ -64,10 +68,9 @@ let stop = function () {
     createBtn('start')
     stopBtn.replaceWith(startBtn)
 
-    setTimeout(() => {
-        clearInterval(inter)
-    }, 0)
-    startBtn.addEventListener('click', start)
+    clearInterval(inter)
+
+
 }
 
 startBtn.addEventListener('click', start)
