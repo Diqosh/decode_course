@@ -1,0 +1,143 @@
+
+/* Слайдер */
+.slick-slider {
+}
+
+/* Слайдер запущен */
+.slick-slider.slick-initialized {
+}
+
+/* Слайдер с точками */
+.slick-slider.slick-dotted {
+}
+
+/* Ограничивающая оболочка */
+.slick-list {
+    overflow: hidden;
+}
+
+/* Лента слайдов */
+.slick-track {
+    display: flex;
+    align-items: flex-start;
+}
+
+/* Слайд */
+.slick-slide {
+
+}
+.slick-slide img {
+    max-width: 100%;
+}
+
+/* Слайд активный (показывается) */
+.slick-slide.slick-active {
+}
+
+/* Слайд основной */
+.slick-slide.slick-current {
+}
+
+/* Слайд по центру */
+/*.slick-slide.slick-center {*/
+/*}*/
+
+/* Клонированный слайд */
+.slick-slide.slick-cloned {
+}
+
+/* Стрелка */
+.slick-arrow {
+}
+
+/* Стрелка влево */
+.slick-arrow.slick-prev {
+}
+
+/* Стрелка вправо */
+.slick-arrow.slick-next {
+}
+
+/* Стрелка не активная */
+.slick-arrow.slick-disabled {
+}
+
+/* Точки (булиты) */
+.slick-dots {
+}
+
+.slick-dots li {
+}
+
+/* Активная точка */
+.slick-dots li.slick-active {
+}
+
+/* Элемент точки */
+.slick-dots li button {
+}
+
+
+.slider {
+    position: relative;
+    padding: 0 50px;
+    max-width: 1000px;
+}
+
+.slider .slick-track{}
+
+.slider .slick-arrow {
+    position: absolute;
+    top: calc(50% - 15px);
+    z-index: 10;
+    font-size: 0;
+    width: 30px;
+    height: 30px;
+}
+
+.slider .slick-arrow.slick-prev {
+    left: 0;
+
+    background: url('../../images/icon/arrow.svg') 0 0 / 100% no-repeat;
+    transform: rotate(180deg);
+}
+
+.slider .slick-arrow.slick-next {
+    right: 0;
+    background: url('../../images/icon/arrow.svg') 0 0 / 100% no-repeat;
+}
+
+
+.slider .slick-dots {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.slider .slick-dots li {
+    width: 10px;
+    height: 10px
+}
+
+/* Активная точка */
+.slider .slick-dots li.slick-active button{
+    background-color: #0a472e;
+}
+
+/* Элемент точки */
+.slider .slick-dots li button {
+    font-size: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.slider__item{
+    transition: .4s;
+    opacity: 0.4;
+}
+.slick-center .slider__item {
+    opacity: 1;
+}

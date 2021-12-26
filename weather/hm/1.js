@@ -1,5 +1,5 @@
 'use strict'
-//how works my program
+
 
 let link = 'http://api.weatherapi.com/v1/forecast.json?key=e9fb9a35dc124ef4a44113239210712&q=Almaty&days=7&aqi=no&alerts=no',
     cities,
@@ -22,7 +22,7 @@ function getweatherDay(toChangeCity) {
     link = link.replace(currentCity, toChangeCity)
     currentCity = toChangeCity
     textCity.innerText = currentCity
-    console.log(link)
+
     requestWeather = new Promise((resolve, reject) => {
         axios.get(link)
             .then((data) => {
@@ -43,9 +43,9 @@ let requestCity = new Promise(resolve => {
 
 
 
-function getOtherWeather(toChangeCity){
+function getOtherWeather(toChangeCity,day){
 
-    getweatherDay(toChangeCity)
+    getweatherDay(toChangeCity,day)
 
     requestWeather.then((requestData) => {
         console.log('Weather Have been gotten')
@@ -53,8 +53,8 @@ function getOtherWeather(toChangeCity){
         let CelciusPer3Hour = [];
 
         weatherDay = requestData.data.forecast.forecastday
-        for (let i = 0; i < weatherDay[0].hour.length; i += 3) {
-            CelciusPer3Hour.push(weatherDay[0].hour[i].temp_c)
+        for (let i = 0; i < weatherDay[day].hour.length; i += 3) {
+            CelciusPer3Hour.push(weatherDay[day].hour[i].temp_c)
         }
 
         let data = {
@@ -82,7 +82,7 @@ function getOtherWeather(toChangeCity){
         console.log(e)
     })
 }
-getOtherWeather('Almaty')
+getOtherWeather('Almaty',0)
 
 
 requestCity.then(data => {
@@ -100,7 +100,7 @@ requestCity.then(data => {
             div.addEventListener('click', ()=>{
 
                 myChart.destroy()
-                getOtherWeather(div.innerText)
+                getOtherWeather(div.innerText,0)
                 console.log(div.innerText)
             })
             div.innerText = cities[i]
@@ -109,8 +109,6 @@ requestCity.then(data => {
         }
 
     })
-
-
 })
 
 
