@@ -81,7 +81,7 @@
 .slider {
     position: relative;
     padding: 0 50px;
-    max-width: 1000px;
+
 }
 
 .slider .slick-track{}
@@ -134,10 +134,27 @@
     border-radius: 50%;
 }
 
-.slider__item{
-    transition: .4s;
+.slider .slider__item{
+    height: 100px;
+}
+.slider .slider__item{
+    text-align: center;
     opacity: 0.4;
+}
+
+
+.slider .slider__item img{
+    max-height: 100%;
 }
 .slick-center .slider__item {
     opacity: 1;
 }
+.slider_big .slider__item{
+    height: 250px;
+    text-align: center;
+}
+.slider_big .slider__item img{
+    max-height: 100%;
+}
+
+
