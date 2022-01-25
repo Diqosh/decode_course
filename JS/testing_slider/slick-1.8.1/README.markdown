@@ -22,9 +22,9 @@ to serve the files as close, and fast as possible to your users:
 Just add a link to the css file in your `<head>`:
 
 ```html
-<!-- Add the slick-theme.css if you want default styling -->
+<!-- Add the slick-theme.style if you want default styling -->
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.css"/>
-<!-- Add the slick-theme.css if you want default styling -->
+<!-- Add the slick-theme.style if you want default styling -->
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick-theme.css"/>
 ```
 

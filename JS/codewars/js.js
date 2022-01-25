@@ -1,25 +1,21 @@
 'use strict'
 
-function duplicateCount(text){
-    const mySet = new Set()
-    text = text.toLowerCase()
-    let cnt = 0
-    for (let i = 0; i < text.length; i++) {
-        mySet.add(text[i]);
-
+function validParentheses(parens) {
+    let myList = []
+    for (let i = 0; i < parens.length; i++) {
+        if(parens[i] === '('){
+            myList.push('(')
+        }else{
+            if(myList.length === 0){
+                return false
+            }
+            myList.pop()
+        }
     }
+    return myList.length === 0;
 
-    mySet.forEach((item)=>{
-
-        let regex = new RegExp(item, 'g')
-
-        if (text.match(regex).length > 1)
-            cnt++
-
-    })
-    return cnt
 }
 
 
-let a = "aasds"
-console.log(duplicateCount(a))
+let a = "(())((()())())"
+console.log(validParentheses(a))

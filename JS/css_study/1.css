@@ -1,0 +1,58 @@
+.parent{
+    display: block;
+    width: 100%;
+    bottom: 300px;
+    border-bottom: 1px solid black;
+    position: absolute;
+}
+
+.circle{
+    width: 70px;
+    height: 70px;
+
+    background-color: #fc0000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /*animation-name:jumpingBaursak ;*/
+    /*animation-duration: 5s ;*/
+    /*animation-fill-mode: backwards ;*/
+    /*animation-timing-function: ease-in;*/
+
+
+}
+
+@keyframes jumpingBaursak{
+    0%{
+        margin-left: 0;
+        margin-bottom: 0;
+        transform: scale(1.5);
+    }
+    20%{
+        margin-left: 100px;
+        margin-bottom: 300px;
+        transform: scale(1.5);
+    }
+    40%{
+        margin-left: 200px;
+        margin-bottom: 0;
+        transform: scale(1.5);
+    }
+    60%{
+        margin-left: 300px;
+        margin-bottom: 300px;
+        transform: scale(1.5);
+    }
+    80%{
+        margin-left: 400px;
+        margin-bottom: 0;
+        transform: scale(1.5);
+    }
+    100%{
+        margin-left: 500px;
+        margin-bottom: 400px;
+        transform: scale(1.5);
+    }
+}

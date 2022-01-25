@@ -1,0 +1,84 @@
+header {
+  background-color: #ffffff;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+header button {
+  background-color: #00A2DC;
+  color: #ffffff;
+  height: 100%;
+  border: none;
+  border-radius: 7px;
+  transition: 0.3s;
+}
+header button:hover {
+  background-color: #025673;
+  transition: 0.3s;
+}
+
+header {
+  height: 130px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+}
+header .container .logo {
+  font-weight: 500;
+  font-size: 50px;
+  color: #00A2DC;
+  min-width: 281px;
+}
+header .container .logo a {
+  color: #007BFF;
+}
+header .container .search {
+  display: flex;
+  justify-content: center;
+  width: 420px;
+  height: 100%;
+}
+header .container .search input {
+  width: 75%;
+  height: 100%;
+  border: 1px solid #ccc8d2;
+}
+header .container .search input::placeholder {
+  padding-left: 20px;
+}
+header .container .search button {
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+header .container .auth_buttons_wrapper {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  width: 30%;
+  gap: 20px;
+}
+header .container .auth_buttons_wrapper button {
+  height: 100%;
+  width: 110px;
+  padding: 10px;
+}
+header .container .auth_buttons_wrapper button a {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*# sourceMappingURL=header.css.map */
