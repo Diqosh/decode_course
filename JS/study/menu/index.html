@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NRB Consulting</title>
+<!--    <link rel="stylesheet" href="style/all.css">-->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+
+        /*Обнуление*/
+        *{
+            padding: 0;
+            margin: 0;
+            border: 0;
+        }
+        *,*:before,*:after{
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        :focus,:active{outline: none;}
+        a:focus,a:active{outline: none;}
+
+        nav,footer,header,aside{display: block;}
+
+        html,body{
+
+            font-family: Montserrat, serif;
+            height: 100%;
+            width: 100%;
+            font-size: 100%;
+            line-height: 1;
+            font-size: 15px;
+            -ms-text-size-adjust: 100%;
+            -moz-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+
+        }
+        input,button,textarea{font-family:inherit;}
+
+        input::-ms-clear{display: none;}
+        button{cursor: pointer;font-size: inherit}
+        button::-moz-focus-inner {padding:0;border:0;}
+        a, a:visited{text-decoration: none; color:inherit}
+        a:hover{text-decoration: none;}
+        ul li{list-style: none;}
+        img{vertical-align: top;}
+
+        h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+        /*--------------------*/
+
+        /*------------------------*/
+        .header {
+            position: sticky;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 50;
+        }
+
+        .header:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 3;
+            width: 100%;
+            height: 100%;
+            background-color: #ab43fc;
+        }
+
+        .container {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 0 10px;
+        }
+
+        .header__body {
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+
+        .header__logo {
+            position: relative;
+            z-index: 3;
+
+        }
+        .content {
+
+            height: 1000px;
+        }
+
+
+        .header__logo img {
+            max-width: 100%;
+        }
+
+        .header__burger {
+            display: none;
+        }
+
+        .header__burger:before {
+            content: '\2630';
+        }
+        .header__menu{
+            position: relative;
+            z-index: 2;
+        }
+
+        @media (max-width: 620px) {
+            .header__burger {
+                display: block;
+
+            }
+            .header__burger.active:before{
+                content: '\00D7';
+            }
+
+            .header__menu{
+                position: fixed;
+                top: -100%;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #e0b2b2;
+            }
+            .header__menu.active{
+                top: 0%;
+            }
+            .header__burger {
+                z-index: 3;
+            }
+            .header__menu{
+                padding-top: 150px;
+            }
+
+
+
+        }
+
+
+        .header__menu {
+        }
+
+        ul.header__list {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+
+        ul.header__list li {
+            color: white;
+            text-transform: uppercase;
+
+
+        }
+    </style>
+</head>
+<body>
+
+<div class="wrapper">
+    <header class="header">
+        <div class="container">
+            <div class="header__body">
+                <div class="header__logo"><a href=""><img src="images/header/logo.png" alt=""></a></div>
+                <div class="header__burger "></div>
+                <div class="header__menu active">
+                    <ul class="header__list">
+                        <li><a href="">Menu item</a></li>
+                        <li><a href="">Menu item</a></li>
+                        <li><a href="">Menu item</a></li>
+                        <li><a href="">Menu item</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias architecto blanditiis commodi
+        consectetur debitis eligendi numquam pariatur quis ratione ullam. Cupiditate ducimus eum excepturi libero
+        officia optio quibusdam quidem quisquam, quos veritatis voluptate voluptatibus. Alias aperiam corporis
+        distinctio est fugiat ipsum laudantium minima molestiae molestias natus, nemo obcaecati quas, repudiandae sit
+        voluptate. Consequatur doloribus error explicabo inventore necessitatibus sapiente veniam vitae? Architecto
+        distinctio dolor eligendi incidunt, nam possimus quae sed similique! A amet at consequuntur doloremque doloribus
+        et exercitationem explicabo facilis id inventore itaque labore laborum minima nesciunt, obcaecati omnis pariatur
+        quas qui reiciendis rem temporibus tenetur totam, ullam vero voluptatum? Ab accusantium alias amet architecto
+        asperiores aut corporis cumque distinctio dolore dolorem doloribus earum expedita explicabo illum in ipsa iure
+        magni molestiae necessitatibus non omnis perferendis perspiciatis ratione rem repudiandae, sed similique sint
+        sit veritatis voluptates. Accusantium aliquam assumenda consectetur cum ex, exercitationem facilis fugiat illum
+        incidunt inventore laudantium, officia pariatur quasi quis veniam veritatis, voluptatibus. Dolore quasi
+        reprehenderit vel voluptate. Alias dolore et incidunt nesciunt, odit quisquam tempora! A aut autem commodi
+        delectus ducimus enim eos est, explicabo, facilis ipsum minus non quia quos, reiciendis tempore totam
+        voluptatum? Cumque dolorum ipsum molestias similique vel! Labore saepe totam voluptatum?
+    </div>
+
+
+</div>
+<!--<script src="js/header/burger.js"></script>-->
+</body>
+</html>

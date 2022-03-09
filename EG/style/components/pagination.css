@@ -1,0 +1,13 @@
+.pagination{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+.pagination > *{
+    text-decoration: underline;
+
+}
+
+.pagination button{
+    background-color: transparent;
+}
