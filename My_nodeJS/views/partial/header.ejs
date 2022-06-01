@@ -1,0 +1,56 @@
+
+<header class="header" >
+    <div class="header__leftNav leftNav">
+        <img src="images/header/Epic_Games_logo.png" alt="logo" class="logo">
+        <ul class="leftNav_menu">
+
+            <li class="leftNav__item"><a href="">store</a></li>
+            <li class="leftNav__item"><a href="">faq</a></li>
+            <li class="leftNav__item"><a href="">help</a></li>
+            <li class="leftNav__item"><a href="">unreal engine</a></li>
+
+
+        </ul>
+    </div>
+    <div class="header__burger">
+        <span></span>
+    </div>
+
+    <div class="header__rightNav rightNav">
+        <ul class="rightNav">
+            <li class="rightNav__item"><img src="images/header/earth.svg" alt="earth"></li>
+
+            <% if(typeof currentUser === 'object' && currentUser) {%>
+
+
+            <li class="rightNav__item"><span class="rightNav__person"><img
+                            src="images/header/person.svg" alt="person"><span
+                            class="person__green-circle"></span></span><a
+                        href=""><%=currentUser.nickname%></a>
+            </li>
+
+
+
+
+
+            <li class="rightNav__item"><a href="/logout"
+                                          style="color: red; flex-basis: 100px">Выход</a>
+            </li>
+
+            <%} else {%>
+
+            <li class="rightNav__item"><span class="rightNav__person"><img
+                            src="images/header/person.svg" alt="person"><span
+                            class="person__green-circle"></span></span><a href="/login">Sign
+                    in</a>
+            </li>
+
+            <%}%>
+
+            <li class="rightNav__item"><a href="">Download</a></li>
+
+        </ul>
+    </div>
+
+
+</header>

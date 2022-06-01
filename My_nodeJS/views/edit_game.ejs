@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style/all.css">
+    <title>Title</title>
+</head>
+<body>
+
+<%- include('partial/header.ejs') %>
+
+<div class="edit_wrapper container">
+    <h1>Edit</h1>
+    <form class="edit_from" method="put" onsubmit="onSubmit(this, event)">
+        <input type="hidden" name="_id" value="<%=game._id%>">
+        <input class="edit__name" type="text" name="name" value="<%=game.title%>">
+        <input class="edit__price" type="text" name="price" value="<%=game.price%>">
+
+        <input type="file" name="image">
+        <button type="submit">Submit</button>
+    </form>
+
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js" integrity="sha512-bPh3uwgU5qEMipS/VOmRqynnMXGGSRv+72H/N260MQeXZIK4PG48401Bsby9Nq5P5fz7hy5UGNmC/W1Z51h2GQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="public/js/header/editGame.js"></script>
+
+</body>
+</html>
+

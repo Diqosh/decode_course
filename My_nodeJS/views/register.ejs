@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style/all.css">
+    <title>Title</title>
+</head>
+<%- include('partial/header.ejs') %>
+<div class="register__wrapper">
+    <form action="/api/users" class="register__form" method="post">
+        <div class="register__logo">
+            <img src="/images/header/Epic_Games_logo.png" alt="">
+        </div>
+        <p>Зарегестрироваться</p>
+
+<!--        <div class="register__country">-->
+<!--            <input type="text" name="country" id="" placeholder="Страна">-->
+<!--        </div>-->
+        <div class="register__full-name">
+            <div class="register__name">
+                <input type="text" name="name" id="" placeholder="Имя">
+            </div>
+            <div class="register__second-name">
+                <input type="text" name="second_name" id="" placeholder="Фамилия">
+            </div>
+        </div>
+        <div class="register__nickname">
+            <input type="text" name="nickname" id="" placeholder="Никнейм">
+        </div>
+        <div class="register__email">
+            <input type="text" name="email" id="" placeholder="Email">
+        </div>
+        <div class="register__password">
+            <input type="password" name="password" id="" placeholder="Пароль">
+        </div>
+        <div class="register__special-mail">
+            <div class="register__checkbox"><input type="checkbox"></div>
+
+            <p>I would like to receive news, surveys and special offers from Epic Games.</p>
+        </div>
+        <div class="register__conditions">
+            <div class="register__checkbox"><input type="checkbox"></div>
+            <p>I have read and agree to the </p>
+        </div>
+        <div class="register__button">
+            <button type="submit">Sign Up</button>
+        </div>
+        <div class="signup"><a href="/pages/login.php">Sign In?</a></div>
+    </form>
+
+
+</div>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js" integrity="sha512-bPh3uwgU5qEMipS/VOmRqynnMXGGSRv+72H/N260MQeXZIK4PG48401Bsby9Nq5P5fz7hy5UGNmC/W1Z51h2GQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="public/js/header/editGame.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style/all.css">
+    <title>Title</title>
+</head>
+<body>
+
+<%- include('partial/header.ejs') %>
+
+<div class="edit_wrapper container">
+    <form class="edit_from" action="/api/games"  method="post" enctype="multipart/form-data">
+        <input class="edit__name" type="text" name="name">
+        <input class="edit__price" type="text" name="price">
+
+        <input type="file" name="image">
+        <button type="submit">Submit</button>
+    </form>
+
+
+</div>
+
+
+
+</body>
+</html>
+

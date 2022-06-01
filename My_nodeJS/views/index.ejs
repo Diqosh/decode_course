@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style/all.css">
+    <title>Title</title>
+</head>
+<body>
+
+<%- include('partial/header.ejs') %>
+
+<%- include('partial/primaryNavigation.ejs') %>
+
+
+
+<div class="main">
+    <div class="main__products products_wrapper">
+        <div class="container">
+            <div class="products__main ">
+
+            <% games.forEach(function (game){%>
+            <div class="products__item">
+                <div class="product__image">
+
+                    <img src="<%=game.img%>" alt="">
+
+                    <button class="add_basket"><img
+                                src="images/header/plus-solid.svg" alt=""></button>
+
+                </div>
+
+                <div class="product__text-wrapper">
+                    <div class="product__title">
+                        <%=game.title%>
+                    </div>
+                    <div class="product__dev">
+
+                        <a href="">tes dev</a>
+                    </div>
+                </div>
+                <div class="product__settings-wrapper">
+
+                    <span><%=game.price%></span>
+                    <div class="product__dots">
+                        <img src="images/products_image/dots.svg" alt="">
+
+
+
+                        <div class="product__settings">
+                            <div class="product__edit">
+                                <a href="/edit_game?id=<%=game._id%>">Edit</a>
+                            </div>
+                            <div class="product__delete" onclick="deleteGame('<%=game._id%>')">
+                                <a href="">Delete</a>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+            <% }) %>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js" integrity="sha512-bPh3uwgU5qEMipS/VOmRqynnMXGGSRv+72H/N260MQeXZIK4PG48401Bsby9Nq5P5fz7hy5UGNmC/W1Z51h2GQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="public/js/header/1.js"></script>
+</body>
+</html>

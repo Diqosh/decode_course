@@ -1,0 +1,4 @@
+.person_item, .PersonFrom > form{
+    display: flex;
+    justify-content: space-between;
+}
